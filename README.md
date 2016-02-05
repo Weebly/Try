@@ -24,3 +24,7 @@ func decodeCountFromData(data: NSData) -> Int? {
 	}
 }
 ```
+
+## Contributors
+
+The concept & original implementation was done by [Jacob Berkman](https://github.com/jberkman).
