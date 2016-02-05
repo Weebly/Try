@@ -8,8 +8,8 @@
 import Foundation
 
 public let tryErrorDomain = "Try"
-public let exceptionErrorCode = 1
-public let exceptionErrorKey = "exception"
+public let tryExceptionErrorCode = 1
+public let tryExceptionErrorKey = "exception"
 
 /**
  Wraps a closure in a `WBTry.tryBlock` to catch Objective-C exceptions using the Swift error handling model.
@@ -26,6 +26,6 @@ public func trap(block: () -> Void) throws {
     }, finallyBlock: nil)
 
     if let e = exception {
-        throw NSError(domain: tryErrorDomain, code: exceptionErrorCode, userInfo: [exceptionErrorKey: e])
+        throw NSError(domain: tryErrorDomain, code: tryExceptionErrorCode, userInfo: [tryExceptionErrorKey: e])
     }
 }
