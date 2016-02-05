@@ -14,7 +14,7 @@ func decodeCountFromData(data: NSData) -> Int? {
 	    	return archiver.decodeIntForKey("count")
 	    }
 	} catch let error as NSError {
-	    if let exception = error.userInfo[exceptionErrorKey] as? NSException {
+	    if let exception = error.userInfo[tryExceptionErrorKey] as? NSException {
 	        dlog("ERROR: Exception decoding count: \(exception)")
 	    } else {
 	        dlog("ERROR: Unknown decoding error: \(error)")
