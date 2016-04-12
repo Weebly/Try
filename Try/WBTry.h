@@ -22,6 +22,6 @@
  @param         finallyBlock            An optional block that is called in the \@finally block.
 
  */
-+ (void)tryBlock:(nonnull void (^)(void))tryBlock  catchAndRethrowBlock:(nullable BOOL (^)(_Nonnull id))catchAndRethrowBlock finallyBlock:(nullable void (^)(void))finallyBlock;
++ (void)tryBlock:( __attribute__((noescape)) void (^ _Nonnull )(void)) tryBlock  catchAndRethrowBlock:(nullable BOOL (^)(_Nonnull id))catchAndRethrowBlock finallyBlock:(nullable void (^)(void))finallyBlock;
 
 @end

@@ -7,25 +7,25 @@
 
 import Foundation
 
-public let tryErrorDomain = "Try"
-public let tryExceptionErrorCode = 1
-public let tryExceptionErrorKey = "exception"
+enum TryError: ErrorType {
+    case Exception(e: NSException)
+}
 
 /**
  Wraps a closure in a `WBTry.tryBlock` to catch Objective-C exceptions using the Swift error handling model.
  
  - parameter    block:  The block of code to run within a `WBTry.tryBlock`.
- - throws:      Throws an `NSError` if the wrapped code throws an exception.
+ - throws:      Throws a `TryError` if the wrapped code throws an exception.
 */
-public func trap(block: () -> Void) throws {
-    var exception: AnyObject?
+public func trap(@noescape block: () -> Void) throws {
+    var exception: NSException?
 
     WBTry.tryBlock(block, catchAndRethrowBlock: {
-        exception = $0
+        exception = $0 as? NSException
         return false
     }, finallyBlock: nil)
 
     if let e = exception {
-        throw NSError(domain: tryErrorDomain, code: tryExceptionErrorCode, userInfo: [tryExceptionErrorKey: e])
+        throw TryError.Exception(e: e)
     }
 }
