@@ -9,7 +9,7 @@
 
 @implementation WBTry
 
-+ (void)tryBlock:(nonnull void (^)(void))tryBlock  catchAndRethrowBlock:(nullable BOOL (^)(_Nonnull id))catchAndRethrowBlock finallyBlock:(nullable void (^)(void))finallyBlock {
++ (void)tryBlock:( __attribute__((noescape)) void (^ _Nonnull )(void)) tryBlock  catchAndRethrowBlock:(nullable BOOL (^)(_Nonnull id))catchAndRethrowBlock finallyBlock:(nullable void (^)(void))finallyBlock {
     @try {
         tryBlock();
     }
