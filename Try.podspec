@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name         = "Try"
-  s.version      = "1.0.0"
+  s.version      = "2.0.0"
   s.summary      = "Handle Objective-C Exceptions with Swift's error handling system"
   s.description  = <<-DESC
 Easily wrap Objective-C APIs that throw Objective-C Exceptions into Swift's error
@@ -13,7 +13,7 @@ handling system.
   s.osx.deployment_target = "10.10"
   s.watchos.deployment_target = "2.0"
   s.tvos.deployment_target = "9.0"
-  s.source       = { :git => "https://github.com/Weebly/Try.git", :tag => "v1.0.0" }
+  s.source       = { :git => "https://github.com/Weebly/Try.git", :tag => "v2.0.0" }
   s.source_files  = "Try/trap.swift", "Try/WBTry.h", "Try/WBTry.m"
   s.requires_arc = true
 end

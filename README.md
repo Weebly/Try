@@ -5,13 +5,13 @@ Try allows you to handle Objective-C exceptions using Swift error handling. Ther
 In the below example, we'll decode an `int` that was written by an `NSKeyedArchiver`. If this data actually encoded a `float` the `decodeIntForKey(_:)` method would normally throw an exception, but with Try it throws a Swift error, and we can handle it gracefully. The method will handle the error in a more Swift-friendly way by returning `nil`.
 
 ```swift
-func decodeCountFromData(data: NSData) -> Int? {
-	let archiver = NSKeyedUnarchiver(forReadingWithData: data)
+func decodeCountFromData(data: Data) -> Int? {
+	let archiver = NSKeyedUnarchiver(forReadingWith: data)
 	defer { archiver.finishDecoding() }
 	
 	do {
 	    try trap {
-	    	return archiver.decodeIntForKey("count")
+	    	return archiver.decodeInteger(forKey: "count")
 	    }
 	} catch let error as NSError {
 	    if let exception = error.userInfo[tryExceptionErrorKey] as? NSException {
@@ -20,7 +20,7 @@ func decodeCountFromData(data: NSData) -> Int? {
 	        dlog("ERROR: Unknown decoding error: \(error)")
 	    }
 	
-		return nil
+	    return nil
 	}
 }
 ```
