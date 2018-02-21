@@ -16,4 +16,5 @@ handling system.
   s.source       = { :git => "https://github.com/Weebly/Try.git", :tag => "v2.1.0" }
   s.source_files  = "Try/trap.swift", "Try/WBTry.h", "Try/WBTry.m"
   s.requires_arc = true
+  s.swift_version = "4.0"
 end
