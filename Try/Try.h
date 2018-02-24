@@ -6,7 +6,17 @@
 //  Copyright © 2016 Weebly. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
+#import <Foundation/Foundation.h>
+
+#if TARGET_OS_MAC
+
+//! Project version number for Try_macOS.
+FOUNDATION_EXPORT double Try_macOSVersionNumber;
+
+//! Project version string for Try_macOS.
+FOUNDATION_EXPORT const unsigned char Try_macOSVersionString[];
+
+#else
 
 //! Project version number for Try.
 FOUNDATION_EXPORT double TryVersionNumber;
@@ -14,6 +24,6 @@ FOUNDATION_EXPORT double TryVersionNumber;
 //! Project version string for Try.
 FOUNDATION_EXPORT const unsigned char TryVersionString[];
 
-// In this header, you should import all the public headers of your framework using statements like #import <Try/PublicHeader.h>
+#endif
 
 #import <Try/WBTry.h>

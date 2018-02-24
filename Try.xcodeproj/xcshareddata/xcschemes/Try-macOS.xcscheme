@@ -14,9 +14,9 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "1AAD317D1C651C6500825D28"
-               BuildableName = "Try.framework"
-               BlueprintName = "Try"
+               BlueprintIdentifier = "00DAEA84203E0B5400D451B6"
+               BuildableName = "Try_macOS.framework"
+               BlueprintName = "Try-macOS"
                ReferencedContainer = "container:Try.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
@@ -47,9 +47,9 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "1AAD317D1C651C6500825D28"
-            BuildableName = "Try.framework"
-            BlueprintName = "Try"
+            BlueprintIdentifier = "00DAEA84203E0B5400D451B6"
+            BuildableName = "Try_macOS.framework"
+            BlueprintName = "Try-macOS"
             ReferencedContainer = "container:Try.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
@@ -65,9 +65,9 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "1AAD317D1C651C6500825D28"
-            BuildableName = "Try.framework"
-            BlueprintName = "Try"
+            BlueprintIdentifier = "00DAEA84203E0B5400D451B6"
+            BuildableName = "Try_macOS.framework"
+            BlueprintName = "Try-macOS"
             ReferencedContainer = "container:Try.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
