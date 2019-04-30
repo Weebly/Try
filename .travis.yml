@@ -1,6 +1,6 @@
 language: objective-c
 osx_image: xcode10.2
-xcode_projec: Try.xcodeproj
+xcode_project: Try.xcodeproj
 xcode_scheme: Try
 xcode_sdk: iphonesimulator12.2
 
