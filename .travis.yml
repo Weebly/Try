@@ -1,6 +1,5 @@
 language: objective-c
-osx_image: xcode8
-xcode_projec: Try.xcodeproj
+osx_image: xcode10.2
+xcode_project: Try.xcodeproj
 xcode_scheme: Try
-xcode_sdk: iphonesimulator10.0
-
+script: xcodebuild -project Try.xcodeproj -target Try -sdk iphonesimulator ONLY_ACTIVE_ARCH=NO | xcpretty
