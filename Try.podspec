@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name         = "Try"
-  s.version      = "2.1.0"
+  s.version      = "2.1.1"
   s.summary      = "Handle Objective-C Exceptions with Swift's error handling system"
   s.description  = <<-DESC
 Easily wrap Objective-C APIs that throw Objective-C Exceptions into Swift's error
